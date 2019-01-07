@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import Projects from "./Components/Projects";
+import Todos from "./Components/Todos";
 import AddProject from "./Components/AddProject";
+
 import uuid from 'uuid';
 import $ from 'jquery';
 import "./App.css";
@@ -91,6 +93,8 @@ handleDeleteProject(id){
       <div className="App">
         <AddProject addProject={this.handleAddProject.bind(this)}  />
         <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/>
+     <hr/>
+     <Todos todos={this.state.todos}/>
       </div>
     );
   }
